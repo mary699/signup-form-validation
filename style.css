@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  padding: 20px;
+}
+
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: whitesmoke;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+}
+
+.container header {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+.container #form {
+  margin-top: 30px;
+}
+
+.container .input-box {
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+#form .input-box input {
+  position: relative;
+  width: 100%;
+  outline: none;
+  height: 50px;
+  border: 1px solid #ddd;
+  padding: 0 15px;
+  font-size: 1rem;
+  margin-top: 8px;
+  color: #707070;
+  border-radius: 6px;
+}
+
+#form .input-box input:focus {
+  border: 3px solid black;
+}
+
+
+#form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+#form .user-option {
+  margin-top: 20px;
+}
+
+#form :where(.user-option, .opts) {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#form .opts {
+  column-gap: 5px;
+  cursor: pointer;
+}
+
+.opts input {
+  accent-color: rgb(0, 0, 0);
+}
+
+#form button {
+  height: 55px;
+  width: 100%;
+  background-color: black;
+  font-weight: 300;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  margin-top: 2rem;
+  border-radius: 6px;
+}
+
+#form button:focus {
+  border: 1px solid white;
+}
+
+#form button:hover {
+  opacity: 0.8;
+}
+
+
+@media screen and (max-width:500px) {
+  #form .column {
+    flex-wrap: wrap;
+  }
+
+}
+
+@media (max-width:280px) {
+  body {
+    padding: 0;
+  }
+
+}
+
+
+/* toogle eye */
+.eye {
+  position: absolute;
+  right: 19px;
+  top: 51%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#hide1 {
+  display: none;
+}
+
+
+/* for javascript styling */
+
+  .input-box.success input {
+  border: 1px solid #09c372;
+}
+
+  .input-box.error input {
+  border: 2px solid #ff3860; /* Change the border color to red */
+}
+
+
+ .input-box .error {
+  color: #ff3860;
+  font-size: 6px;
+  height: 13px;
+}
